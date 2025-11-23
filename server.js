@@ -1,13 +1,3 @@
-/**
- * Simple Express server to serve the static site and accept contact form submissions.
- * Usage:
- *   - npm install express
- *   - node server.js
- *
- * Serves static files from the project root and exposes POST /api/contact to store
- * submissions in ./data/contacts.json
- */
-
 const express = require('express');
 const path = require('path');
 const fs = require('fs').promises;
@@ -45,8 +35,7 @@ app.post('/api/contact', async (req, res) => {
       const contents = await fs.readFile(CONTACTS_FILE, 'utf8');
       contacts = JSON.parse(contents || '[]');
       if (!Array.isArray(contacts)) contacts = [];
-    } catch (err) {
-      // If file doesn't exist or is invalid, start fresh
+    } catch {
       contacts = [];
     }
 
@@ -70,8 +59,8 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-// Fallback to index.html for client-side routing (if needed)
-app.get('*', (req, res) => {
+// Fallback to index.html for client-side routing
+app.get('/:catchAll(*)', (req, res) => {
   const indexPath = path.join(__dirname, 'index.html');
   res.sendFile(indexPath);
 });
