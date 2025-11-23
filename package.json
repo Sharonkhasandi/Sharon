@@ -14,5 +14,8 @@
   "type": "commonjs",
   "devDependencies": {
     "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
