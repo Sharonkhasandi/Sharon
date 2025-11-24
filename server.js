@@ -60,10 +60,14 @@ app.post('/api/contact', async (req, res) => {
 });
 
 // Fallback to index.html for client-side routing
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+app.use((req, res, next) => {
+  if (req.method !== 'GET') return next();
+  const accept = (req.headers.accept || '');
+  if (accept.includes('text/html')) {
+    return res.sendFile(path.join(__dirname, 'index.html'));
+  }
+  return next();
 });
-
 
 // Start server
 const server = app.listen(PORT, () => {
