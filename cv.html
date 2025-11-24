@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharon Khasandi - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #555; /* Dark background for browser view to pop the paper */
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px; /* Base font size */
+            line-height: 1.5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* A4 Paper Simulation */
+        .page {
+            background-color: white;
+            width: 210mm;
+            min-height: 297mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #f2f4f4; /* Light greyish background */
+            padding: 40px 50px;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            color: #1f5e63; /* Dark Teal */
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+        }
+
+        h1 span {
+            color: #668c92; /* Lighter Teal/Grey */
+            font-weight: 400;
+            font-size: 18px;
+            font-style: italic;
+            margin-left: 5px;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #444;
+        }
+
+        .contact-item i {
+            width: 20px;
+            color: #333;
+            font-size: 12px;
+        }
+
+        /* Main Content Layout */
+        .content {
+            padding: 30px 50px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #1f5e63; /* Dark Teal */
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: capitalize;
+            border-bottom: 1px solid #1f5e63;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 i {
+            font-size: 14px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-column {
+            width: 48%;
+        }
+
+        .skill-title {
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #000;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 15px;
+        }
+
+        li {
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+
+        /* Languages Grid */
+        .languages-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .lang-item {
+            width: 48%;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .edu-degree {
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .edu-school {
+            font-style: italic;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .edu-date {
+            font-size: 12px;
+            color: #333;
+            text-align: right;
+        }
+
+        /* Print settings */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <header>
+            <h1>Sharon khasandi <span>Computer scientist</span></h1>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>khasandisharoh@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+254111816845</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kisii</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-flag"></i>
+                    <span>Kenya</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2><i class="fas fa-address-card"></i> Profile</h2>
+                <p>
+                    A motivated and detail-oriented Computer Scientist passionate about developing modern, innovative software solutions. Skilled in multiple programming languages and collaborative problem-solving. Adapt quickly in learning new technologies and thriving in fast-paced environments.
+                </p>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-brain"></i> Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-column">
+                        <div class="skill-title">Hard skills</div>
+                        <ul>
+                            <li>Programming Languages: Python, Java, C++</li>
+                            <li>Software Development & Design</li>
+                            <li>Database Management (MySQL, PostgreSQL)</li>
+                            <li>Web Development (HTML, CSS, JavaScript)</li>
+                            <li>Network Security Basics</li>
+                            <li>Research and Report Writing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-column">
+                        <div class="skill-title">Soft skills</div>
+                        <ul>
+                            <li>Communication and Teamwork</li>
+                            <li>Critical thinking and Problem solving</li>
+                            <li>Work Ethic and professional</li>
+                            <li>Leadership and growth.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-globe-africa"></i> Languages</h2>
+                <div class="languages-container">
+                    <div class="lang-item">English</div>
+                    <div class="lang-item">Kiswahili</div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                
+                <div class="education-item">
+                    <div class="edu-header">
+                        <div class="edu-degree">High School Education</div>
+                        <div class="edu-date">02/2018 – 04/2022</div>
+                    </div>
+                    <div class="edu-school">Archbishop Njenga Girls High School</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="edu-header">
+                        <div class="edu-degree">Bachelor science in Computer science</div>
+                        <div class="edu-date">08/2022 – Present</div>
+                    </div>
+                    <div class="edu-school">Kisii University</div>
+                    <div class="edu-date" style="text-align: right;">Kisii</div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fas fa-pen-nib"></i> Achievements</h2>
+                <ul>
+                    <li>Completed multiple collaborative tech projects at university.</li>
+                    <li>Recognized for leadership in programming group discussions.</li>
+                    <li>Participated in inter-university club events.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>
