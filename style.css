@@ -211,7 +211,7 @@ body {
     width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 760px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1420px;
     }
